@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Coronavirus Notice Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-size: 16px;
+            line-height: 16px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        #preview {
+            width: 100%;
+            margin: 15px 0;
+        }
+        #placeholder {
+            padding: 15px;
+            background: #eee;
+        }
+        #cv-banner-config {
+            line-height: 1.2em;
+            padding: 15px;
+        }
+        #cv-banner-config textarea {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="preview">
+        <div id="placeholder"></div>
+    </div>
+
+    <div class="options">
+        <form id="cv-banner-config">
+            <label for="cv_message">Message: </label><input id="cv_message" type="text" placeholder="Enter your message here" size="50"/><br />
+            <input type="checkbox" value="1" id="cv_fixed"><label for="cv_fixed">Fixed Position</label><br />
+            <input type="color" id="cv_background" value="#ff0000"><label for="cv_background"> Background Colour</label>
+            <input type="color" id="cv_foreground" value="#ffffff"><label for="cv_foreground"> Text Colour</label>
+            <input type="color" id="cv_link_colour" value="#ffffff"><label for="cv_link_colour"> Link Colour</label><br />
+            <label for="cv_link_url">Link URL: </label><input id="cv_link_url" type="text" placeholder="Link URL"/><br />
+            <input type="checkbox" value="1" id="cv_wrap_link" checked="checked"><label for="cv_wrap_link"> Wrap Link</label><br />
+            <label for="cv_link_text">Link Text: </label><input id="cv_link_text" type="text" value="Read More" style="display: none"/><br />
+            <input type="submit" value="Generate" id="cv_generate"><br />
+            <label for="cv_code">Output:</label><br/>
+            <textarea id="cv_code" rows="15" readonly></textarea>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
